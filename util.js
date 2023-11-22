@@ -84,3 +84,30 @@ class Cell {
 	}
 
 }
+
+class Swatch {
+	constructor(color_array) {
+		this.colors = ["#313131", ...color_array];
+		this.color = color_array[0];
+	}
+
+	setSwatchView() {
+		var l = document.getElementsByClassName("swatch-color");
+		for(let i=0; i<l.length; i++) {
+			l[i].style.background = this.colors[i];
+			
+			l[i].addEventListener("click", (e) => {
+				this.color = this.colors[i];
+			});
+
+			l[i].addEventListener("touchstart", (e) => {
+				e.preventDefault();
+				this.color = this.colors[i];
+			});
+			
+			l[i].addEventListener("touchend", (e) => {
+				e.preventDefault();
+			});
+		}
+	}
+}
