@@ -1,5 +1,4 @@
 
-// setting up canvas and constants
 const rows = 25;
 const columns = 25;
 const cell_size = 20;
