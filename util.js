@@ -1,3 +1,12 @@
+function changeColor(element) {
+    element.style.backgroundColor = "lightcoral";
+}
+
+function resetColor(element) {
+    element.style.backgroundColor = "lightblue";
+}
+
+
 class Grid {
 	constructor(row_count, column_count, cell_size) {
 

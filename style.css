@@ -43,6 +43,7 @@ canvas {
 	margin: 15px 15px;
 	float: left;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .info-text {
