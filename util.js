@@ -1,6 +1,4 @@
-
 class Grid {
-
 	constructor(row_count, column_count, cell_size) {
 
 		this.row_count = row_count;
@@ -59,13 +57,12 @@ class Grid {
 
 
 class Cell {
-
 	constructor(x_index, y_index, size) {
 		this.padding = 1;
 		this.size = size;
 		this.x = x_index * this.size;
 		this.y = y_index * this.size;
-		this.color = "#313131"; // default is white
+		this.color = "#313131";
 		this.isHovered = false;
 	}
 
@@ -99,7 +96,6 @@ class Swatch {
 		for(let i=0; i<l.length; i++) {
 			l[i].style.background = this.colors[i];
 			
-			// Select color event
 			l[i].addEventListener("click", (e) => {
 				this.color = this.colors[i];
 			});
@@ -112,26 +108,7 @@ class Swatch {
 			l[i].addEventListener("touchend", (e) => {
 				e.preventDefault();
 				let _color = window.prompt("Enter color hex code (e.g. #fcba03):");
-				// Restante do código para verificar e definir a cor
 			});
-
-			// Change color event
-			l[i].addEventListener("contextmenu", (e) => {
-				e.preventDefault();
-				let _color = window
-					.prompt("Enter color hex code (e.g. #fcba03):");
-				
-				if( !(/^#[0-9A-Fa-f]{6}$/i.test(_color) || 
-					/^#[0-9A-Fa-f]{3}$/i.test(_color)) ) {
-					window.alert("Invalid hex code given.")
-				}
-				else {
-					this.colors[i] = _color;
-					this.color = this.colors[i];
-					l[i].style.background = this.colors[i];
-				}
-
-			})
 		}
 	}
 }
