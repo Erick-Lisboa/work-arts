@@ -1,7 +1,8 @@
 
+// setting up canvas and constants
 const rows = 25;
 const columns = 25;
-const cell_size = 15;
+const cell_size = 20; // 20x20 grid
 
 const c = document.querySelector('canvas');
 const c_i = document.querySelector('#cell-index');

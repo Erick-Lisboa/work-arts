@@ -1,38 +1,19 @@
-
-
 * {
 	padding: 0px;
 }
 
 body {
 	/*background: #dfefff;*/
-	background: #585858;
-	font: 15px "Arial", sans-serif;
+	background: #e1f0ff;
 	margin: 0;
-	font-family: 'Pixelify Sans', sans-serif;
-}
 
-main {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font: 15px "Arial", sans-serif;
 }
 
 canvas {
-	border: #585858 20px solid;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-}
-
-main {
-	width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	margin: 20px auto;
+	border: #89b 20px solid;
+	border-radius: 24px;
 }
 
 #container {
@@ -40,13 +21,13 @@ main {
 }
 
 #data {
-	color: #4B4949;
+	color: #212121;
 }
 
 .swatch-container {
 	width: 540px;
 	padding: 5px 0px;
-	border: #ffffff 1px solid;
+	border: #89b 1px solid;
 	border-radius: 8px;
 	overflow-wrap: normal;
 	text-align: left;
@@ -55,34 +36,44 @@ main {
 
 .swatch-color {
 	display: block;
-	border: solid white 2px;
+	border: solid #212121 2px;
 	border-radius: 50%;
 	width: 56px;
 	height: 56px;
-	background: #4B4949;
+	background: #0088ff;
 	margin: 15px 15px;
 	float: left;
 	cursor: pointer;
 }
 
 .info-text {
-	font-family: 'Pixelify Sans', sans-serif;
 	margin-left: 20px;
 	font: 15px Arial, sans-serif;
-	color: #ffffff;
+	color: #89b;
 }
 
 .eraser {
 	background: white;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
-.material-symbols-outlined {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.gallery-options {
+	margin-top: 20px;
+	width: 540px;
+	display: block;
+	overflow: hidden;
 }
 
+.tag {
+	background-color: #dc3545;
+	display: inline;
+    padding: .2em .5em .2em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}

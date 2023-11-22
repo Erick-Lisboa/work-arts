@@ -65,7 +65,7 @@ class Cell {
 		this.size = size;
 		this.x = x_index * this.size;
 		this.y = y_index * this.size;
-		this.color = "#4B4949";
+		this.color = "#ffffff"; // default is white
 		this.isHovered = false;
 	}
 
@@ -81,7 +81,7 @@ class Cell {
 			this.size-this.padding*2);
 
 		if (this.isHovered) {
-			ctx.strokeStyle = "#ffffff";
+			ctx.strokeStyle = "#00f";
 			ctx.strokeRect(this.x, this.y, this.size, this.size);
 		}
 	}
@@ -90,7 +90,7 @@ class Cell {
 
 class Swatch {
 	constructor(color_array) {
-		this.colors = ["#4B4949", ...color_array];
+		this.colors = ["#ffffff", ...color_array];
 		this.color = color_array[0];
 	}
 
@@ -107,6 +107,19 @@ class Swatch {
 			// Change color event
 			l[i].addEventListener("contextmenu", (e) => {
 				e.preventDefault();
+				let _color = window
+					.prompt("Enter color hex code (e.g. #fcba03):");
+				
+				if( !(/^#[0-9A-Fa-f]{6}$/i.test(_color) || 
+					/^#[0-9A-Fa-f]{3}$/i.test(_color)) ) {
+					window.alert("Invalid hex code given.")
+				}
+				else {
+					this.colors[i] = _color;
+					this.color = this.colors[i];
+					l[i].style.background = this.colors[i];
+				}
+
 			})
 		}
 	}
