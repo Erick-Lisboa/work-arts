@@ -107,19 +107,6 @@ class Swatch {
 			// Change color event
 			l[i].addEventListener("contextmenu", (e) => {
 				e.preventDefault();
-				let _color = window
-					.prompt("Enter color hex code (e.g. #fcba03):");
-				
-				if( !(/^#[0-9A-Fa-f]{6}$/i.test(_color) || 
-					/^#[0-9A-Fa-f]{3}$/i.test(_color)) ) {
-					window.alert("Invalid hex code given.")
-				}
-				else {
-					this.colors[i] = _color;
-					this.color = this.colors[i];
-					l[i].style.background = this.colors[i];
-				}
-
 			})
 		}
 	}

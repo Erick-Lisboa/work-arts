@@ -1,7 +1,7 @@
 
 const rows = 25;
 const columns = 25;
-const cell_size = 20;
+const cell_size = 15;
 
 const c = document.querySelector('canvas');
 const c_i = document.querySelector('#cell-index');
