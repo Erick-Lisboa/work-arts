@@ -22,6 +22,15 @@ c.addEventListener("mousemove",(e)=> {
 c.addEventListener("mousedown",(e)=> mouse.isClicked = true);
 c.addEventListener("mouseup",(e)=> mouse.isClicked = false);
 /// MOUSE INPUT SECTION
+c.addEventListener("touchmove", (e) => {
+    mouse.x = e.touches[0].clientX - c.offsetLeft - 20;
+    mouse.y = e.touches[0].clientY - c.offsetTop - 20;
+});
+
+c.addEventListener("touchstart", (e) => mouse.isClicked = true);
+
+c.addEventListener("touchend", (e) => mouse.isClicked = false);
+
 
 // Initialization
 function init() {

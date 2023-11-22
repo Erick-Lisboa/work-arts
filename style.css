@@ -4,7 +4,7 @@
 
 body {
 	/*background: #dfefff;*/
-	background: #e1f0ff;
+	background: #585858;
 	margin: 0;
 
 	font: 15px "Arial", sans-serif;
@@ -12,7 +12,7 @@ body {
 
 canvas {
 	margin: 20px auto;
-	border: #89b 20px solid;
+	border: rgba(0, 0, 0, 0) 20px solid;
 	border-radius: 24px;
 }
 
@@ -27,7 +27,7 @@ canvas {
 .swatch-container {
 	width: 540px;
 	padding: 5px 0px;
-	border: #89b 1px solid;
+	border: rgb(255, 255, 255) 1px solid;
 	border-radius: 8px;
 	overflow-wrap: normal;
 	text-align: left;
@@ -40,7 +40,7 @@ canvas {
 	border-radius: 50%;
 	width: 56px;
 	height: 56px;
-	background: #0088ff;
+	background: #585858;
 	margin: 15px 15px;
 	float: left;
 	cursor: pointer;
@@ -49,11 +49,11 @@ canvas {
 .info-text {
 	margin-left: 20px;
 	font: 15px Arial, sans-serif;
-	color: #89b;
+	color: rgb(255, 255, 255);
 }
 
 .eraser {
-	background: white;
+	background: #585858;
 }
 
 .gallery-options {
@@ -61,19 +61,4 @@ canvas {
 	width: 540px;
 	display: block;
 	overflow: hidden;
-}
-
-.tag {
-	background-color: #dc3545;
-	display: inline;
-    padding: .2em .5em .2em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }

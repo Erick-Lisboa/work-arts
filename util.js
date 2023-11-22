@@ -65,7 +65,7 @@ class Cell {
 		this.size = size;
 		this.x = x_index * this.size;
 		this.y = y_index * this.size;
-		this.color = "#ffffff"; // default is white
+		this.color = "#313131"; // default is white
 		this.isHovered = false;
 	}
 
@@ -81,7 +81,7 @@ class Cell {
 			this.size-this.padding*2);
 
 		if (this.isHovered) {
-			ctx.strokeStyle = "#00f";
+			ctx.strokeStyle = "#ffffff";
 			ctx.strokeRect(this.x, this.y, this.size, this.size);
 		}
 	}
@@ -90,7 +90,7 @@ class Cell {
 
 class Swatch {
 	constructor(color_array) {
-		this.colors = ["#ffffff", ...color_array];
+		this.colors = ["#313131", ...color_array];
 		this.color = color_array[0];
 	}
 
@@ -102,6 +102,17 @@ class Swatch {
 			// Select color event
 			l[i].addEventListener("click", (e) => {
 				this.color = this.colors[i];
+			});
+
+			l[i].addEventListener("touchstart", (e) => {
+				e.preventDefault();
+				this.color = this.colors[i];
+			});
+			
+			l[i].addEventListener("touchend", (e) => {
+				e.preventDefault();
+				let _color = window.prompt("Enter color hex code (e.g. #fcba03):");
+				// Restante do código para verificar e definir a cor
 			});
 
 			// Change color event
